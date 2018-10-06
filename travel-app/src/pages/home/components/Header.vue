@@ -25,7 +25,7 @@ export default {
     // 1rem = html font-size = 50px
     .header 
         display: flex
-        line-height: .86rem
+        line-height: 0.86rem
         background: $bgColor
         color: #fff
         .header-left
