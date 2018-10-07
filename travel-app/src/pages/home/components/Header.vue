@@ -4,7 +4,7 @@
             <div class="iconfont back-icon">&#xe624;</div>
         </div>
         <div class="header-input">
-            <span class="iconfont">&#xe632;</span>
+            <span class="iconfont search-icon">&#xe632;</span>
             输入城市/景点/游玩主题
         </div>
         <div class="header-right">
@@ -25,32 +25,36 @@ export default {
     // 1rem = html font-size = 50px
     .header 
         display: flex
-        line-height: 0.86rem
+        line-height: 1.72rem
         background: $bgColor
         color: #fff
         .header-left
-            width: .64rem
+            width: 1.28rem
             float: left
             .back-icon
                 text-align: center
-                font-size: .4rem
+                font-size: .8rem
         .header-input
             flex: 1
-            height: .64rem
-            line-height: .64rem
-            margin-top: .12rem
-            margin-left: .2rem
-            padding-left: .2rem
+            height: 1.24rem
+            line-height: 1.24rem
+            margin-top: .24rem
+            margin-left: .4rem
+            padding-left: .4rem
             background: #fff
             border-radius: .1rem
             color: #ccc
+            font-size: .55rem
+            .search-icon
+                font-size: .55rem
         .header-right
-            width: 1.24rem
+            width: 2.48rem
             float: right
             text-align: center
+            font-size: .55rem
             .arrow-icon
                 margin-left: -.04rem
-                font-size: .24rem
+                font-size: .48rem
 </style>
 
 
