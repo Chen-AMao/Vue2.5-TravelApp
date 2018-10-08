@@ -8,6 +8,7 @@ import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
+
 Vue.config.productionTip = false;
 // 解决移动端300ms延迟的点击问题
 fastClick.attach(document.body);

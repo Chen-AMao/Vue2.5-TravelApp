@@ -2,7 +2,7 @@
     <div>
         <div class="recommend-title">周末去哪儿</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList"
+            <li class="item border-bottom" v-for="item of list"
             :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.imgUrl">
@@ -19,30 +19,8 @@
 <script>
 export default {
     name: 'HomeWeekend',
-    data () {
-        return {
-            recommendList: [{
-                id: '0001',
-                imgUrl: 'http://img1.qunarzz.com/sight/source/1505/f1/ae9d4299b8aaea.jpg_r_640x214_0c555905.jpg',
-                title: '南京必游TOP10',
-                desc: '看尽王侯将相荣辱成败，六朝金粉潮起潮落'
-            },{
-                id: '0002',
-                imgUrl: 'http://img1.qunarzz.com/sight/source/1505/e1/cdbf56d837da59.jpg_r_640x214_105fc3f2.jpg',
-                title: '民国情怀国共风华',
-                desc: '找到你心中想要的那个民国时期的南京'
-            },{
-                id: '0003',
-                imgUrl: 'http://img1.qunarzz.com/sight/source/1509/31/534910d969850a.jpg_r_640x214_6ac50353.jpg',
-                title: '南京赏秋指南',
-                desc: '金色与红色的完美交融造就了南京秋天的色调'
-            },{
-                id: '0004',
-                imgUrl: 'http://img1.qunarzz.com/sight/source/1505/f3/d51669250308cc.jpg_r_640x214_7a127cd0.jpg',
-                title: '秦淮金粉里的南京',
-                desc: '六朝金粉，处处诉说着南京的历史'
-            }]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
@@ -50,7 +28,6 @@ export default {
 <style lang="stylus" scoped>
     @import '~@/assets/styles/mixins.styl'
     .recommend-title
-        margin-top: .4rem
         line-height: 2.0rem
         background: #eee
         text-indent: .6rem
@@ -60,7 +37,7 @@ export default {
         .item-img-wrapper
             overflow: hidden
             height: 0
-            padding-bottom: 33.9%
+            padding-bottom: 37.09%
         .item-img
             width: 100%
         .item-info
