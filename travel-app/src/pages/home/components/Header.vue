@@ -7,10 +7,12 @@
             <span class="iconfont search-icon">&#xe632;</span>
             输入城市/景点/游玩主题
         </div>
-        <div class="header-right">
-            {{this.city}}
-            <span class="iconfont arrow-icon">&#xe64a;</span>
-        </div>
+        <router-link to='/city'>
+            <div class="header-right">
+                {{this.city}}
+                <span class="iconfont arrow-icon">&#xe64a;</span>
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -28,20 +30,20 @@ export default {
     // 1rem = html font-size = 50px
     .header 
         display: flex
-        line-height: 1.72rem
+        line-height: 2.06rem
         background: $bgColor
         color: #fff
         .header-left
-            width: 1.28rem
+            width: 1.44rem
             float: left
             .back-icon
                 text-align: center
-                font-size: .8rem
+                font-size: 1rem
         .header-input
             flex: 1
-            height: 1.24rem
-            line-height: 1.24rem
-            margin-top: .24rem
+            height: 1.52rem
+            line-height: 1.52rem
+            margin-top: .27rem
             margin-left: .4rem
             padding-left: .4rem
             background: #fff
@@ -51,13 +53,14 @@ export default {
             .search-icon
                 font-size: .55rem
         .header-right
-            width: 2.48rem
+            width: 2.88rem
             float: right
             text-align: center
-            font-size: .55rem
+            font-size: .7rem
+            color: #fff
             .arrow-icon
                 margin-left: -.04rem
-                font-size: .48rem
+                font-size: .62rem
 </style>
 
 
