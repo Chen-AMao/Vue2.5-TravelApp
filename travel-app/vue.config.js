@@ -1,11 +1,15 @@
-const mockdata = require('./static/mock/index.json');
+const mockdata_index = require('./static/mock/index.json');
+const mockdata_city = require('./static/mock/city.json');
 
 module.exports = {
     //...
   devServer: {
     before(app) {
       app.get('/static/mock/index.json',(req,res)=>{
-        res.json(mockdata);
+        res.json(mockdata_index);
+      }),
+      app.get('/static/mock/city.json',(req,res)=>{
+        res.json(mockdata_city);
       })
     },
 
