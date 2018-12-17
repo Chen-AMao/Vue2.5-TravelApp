@@ -17,10 +17,14 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
     name: 'HomeHeader',
     props: {
-        city: String
+        // city: String
+    },
+    computed: {
+        ...mapState(['city'])
     }
 }
 </script>
@@ -53,7 +57,8 @@ export default {
             .search-icon
                 font-size: .55rem
         .header-right
-            width: 2.88rem
+            min-width: 2.88rem
+            padding: 0 .3rem
             float: right
             text-align: center
             font-size: .7rem
