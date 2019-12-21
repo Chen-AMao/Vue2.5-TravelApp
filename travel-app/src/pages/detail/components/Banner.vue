@@ -1,36 +1,43 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1511/ea/eaf1bdc38aed9e6690.img.jpg_600x330_5597540f.jpg">
+            <img class="banner-img" :src="bannerImg">
             <div class="banner-info">
-                <div class="banner-title">银杏湖乐园</div>
+                <div class="banner-title">{{this.sightName}}</div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xe604;</span>
-                    39
+                    {{this.bannerImgs.length}}
                 </div>
             </div>
         </div>
-        <common-gallery
-            :imgs="imgs"
-            v-show="showGallery"
-            @close="handleGalleryClose">
-        </common-gallery>
+        <fade-animation>
+            <common-gallery
+                :imgs="bannerImgs"
+                v-show="showGallery"
+                @close="handleGalleryClose">
+            </common-gallery>
+        </fade-animation>
     </div>
 </template>
 
 <script>
 import CommonGallery from '../../../common/gallery/Gallery.vue'
+import FadeAnimation from '../../../common/fade/FadeAnimation'
 export default {
     name: 'DetailBanner',
+    props: {
+        sightName: String,
+        bannerImg: String,
+        bannerImgs: Array
+    },
     data () {
         return {
-            showGallery: false,
-            imgs:  ['http://img1.qunarzz.com/sight/p0/1604/4a/4a8ac5bde1092d9190.water.jpg_r_800x800_2ef76fed.jpg',
-                'http://img1.qunarzz.com/sight/p0/1604/4a/4a8ac5bde1092d9190.water.jpg_r_800x800_2ef76fed.jpg']
+            showGallery: false
         }
     },
     components: {
-        CommonGallery
+        CommonGallery,
+        FadeAnimation
     },
     methods: {
         handleBannerClick: function () {
