@@ -12,7 +12,7 @@
     "better-scroll": "^1.13.2",
     "fastclick": "^1.0.6",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
+    "stylus-loader": "^7.1.0",
     "vue": "^2.5.17",
     "vue-awesome-swiper": "^2.6.7",
     "vue-devtools": "git+https://github.com/vuejs/vue-devtools.git",
@@ -20,9 +20,9 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-plugin-eslint": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "vue-template-compiler": "^2.5.17"
   }
 }
